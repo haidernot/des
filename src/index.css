@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* IPTV Theme Colors */
+    --background: 281 100% 12%;  /* Deep purple #2e003e */
+    --foreground: 0 0% 82%;      /* Light gray #d1d1d1 */
+
+    --card: 281 64% 20%;         /* Lighter purple for cards */
+    --card-foreground: 0 0% 82%;
+
+    --popover: 281 64% 20%;
+    --popover-foreground: 0 0% 82%;
+
+    --primary: 30 100% 50%;     /* Orange */
+    --primary-foreground: 12 100% 12%;  /* Darker orange */
+
+    --secondary: 281 64% 25%;    /* Medium purple */
+    --secondary-foreground: 0 0% 82%;
+
+    --muted: 281 64% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 30 100% 50%;      /* Orange accent */
+    --accent-foreground: 12 100% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 82%;
+
+    --border: 281 64% 25%;
+    --input: 281 64% 25%;
+
+    --ring: 30 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(281 100% 12%) 0%, hsl(281 64% 20%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(281 64% 20%) 0%, hsl(281 64% 18%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(281 100% 12%) 0%, hsl(281 64% 8%) 50%, hsl(281 64% 25%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(30 100% 50% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 281 100% 12%;
+    --sidebar-foreground: 0 0% 82%;
+
+    --sidebar-primary: 30 100% 50%;
+    --sidebar-primary-foreground: 12 100% 12%;
+
+    --sidebar-accent: 281 64% 20%;
+    --sidebar-accent-foreground: 0 0% 82%;
+    --sidebar-border: 281 64% 25%;
+
+    --sidebar-ring: 30 100% 50%;
+  }
+
+  .dark {
+    /* Dark mode colors (same as light mode here) */
+    --background: 281 100% 12%;
+    --foreground: 0 0% 82%;
+    --card: 281 64% 20%;
+    --card-foreground: 0 0% 82%;
+    --popover: 281 64% 20%;
+    --popover-foreground: 0 0% 82%;
+
+    --primary: 30 100% 50%;
+    --primary-foreground: 12 100% 12%;
+
+    --secondary: 281 64% 25%;
+    --secondary-foreground: 0 0% 82%;
+    --muted: 281 64% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 30 100% 50%;
+    --accent-foreground: 12 100% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 82%;
+
+    --border: 281 64% 25%;
+    --input: 281 64% 25%;
+
+    --ring: 30 100% 50%;
+
+    --sidebar-background: 281 100% 12%;
+    --sidebar-foreground: 0 0% 82%;
+
+    --sidebar-primary: 30 100% 50%;
+    --sidebar-primary-foreground: 12 100% 12%;
+
+    --sidebar-accent: 281 64% 20%;
+    --sidebar-accent-foreground: 0 0% 82%;
+
+    --sidebar-border: 281 64% 25%;
+    --sidebar-ring: 30 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-cairo antialiased;
+    background: var(--gradient-primary);
+    min-height: 100vh;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* إلغاء تدرج النصوص، واستخدام لون برتقالي ثابت */
+  .gradient-text {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    color: #ff800a !important;
+  }
+  
+  .glow-shadow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .fade-in {
+    @apply animate-[fadeIn_0.6s_ease-out];
+  }
+  
+  .slide-up {
+    @apply animate-[slideUp_0.8s_ease-out];
+  }
+
+  .bg-gradient-logo {
+    background-image: linear-gradient(to bottom right, hsl(270, 70%, 45%), hsl(260, 85%, 75%));
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}

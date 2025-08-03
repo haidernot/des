@@ -1,0 +1,12 @@
+{
+  "name": "kalamy-maak-00-main",
+  "type": "landing-page",
+  "version": "1.0.0",
+  "author": "Haider Designer",
+  "categories": ["Landing Page"],
+  "settings": {
+    "primaryColor": "#4F46E5",
+    "secondaryColor": "#6B7280",
+    "fontFamily": "Arial, sans-serif"
+  }
+}
