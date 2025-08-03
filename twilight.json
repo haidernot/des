@@ -4,8 +4,7 @@
   "version": "1.0.0",
   "author": "Haider Designer",
   "description": "Modern and attractive landing page theme using Twilight technology",
-  "categories": ["landing-page", "modern"],
-  "repository": "https://github.com/haidernot/des",
+  "categories": ["landing-page"],
   "settings": {
     "primaryColor": "#4F46E5",
     "secondaryColor": "#6B7280",
