@@ -1,9 +1,10 @@
 {
-  "name": "kalamy-maak-00-main",
+  "name": "sari",
   "type": "landing-page",
   "version": "1.0.0",
   "author": "Haider Designer",
-  "categories": ["Landing Page"],
+  "description": "Modern and attractive landing page theme using Twilight technology",
+  "categories": ["landing-page", "modern"],
   "settings": {
     "primaryColor": "#4F46E5",
     "secondaryColor": "#6B7280",
