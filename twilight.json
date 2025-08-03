@@ -1,10 +1,11 @@
+// لو اخترت Store Theme
 {
-  "name": "sari",
-  "type": "landing-page",
+  "name": "sari-store",
+  "type": "store-theme",
   "version": "1.0.0",
   "author": "Haider Designer",
-  "description": "Modern and attractive landing page theme using Twilight technology",
-  "categories": ["landing-page"],
+  "description": "Full featured store theme with Twilight technology",
+  "categories": ["store", "modern"],
   "settings": {
     "primaryColor": "#4F46E5",
     "secondaryColor": "#6B7280",
